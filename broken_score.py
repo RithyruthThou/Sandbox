@@ -4,13 +4,17 @@ Broken program to determine score status
 """
 
 # TODO: Fix this!
-
-score = float(input("Enter score: "))
-if score > 100 or score < 0:
-    print("Invalid score")
-elif score >= 90:
-        print("Excellent")
-elif score >= 50:
-        print("Passable")
-elif score < 50:
-        print("Bad")
+def main():
+    score = float(input("Enter score: "))
+    print(determine_grades(score))
+def determine_grades(score):
+    if score > 100 or score < 0:
+        grade = "Invalid score"
+    elif score >= 90:
+        grade = "Excellent"
+    elif score >= 50:
+        grade = "Passable"
+    elif score < 50:
+        grade = "Bad"
+    return grade
+main()
